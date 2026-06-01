@@ -49,7 +49,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-semibold text-white mb-5 text-base">Quick Links</h4>
             <ul className="space-y-3">
-              {[{ label: "Home", href: "/" }, { label: "All Properties", href: "/properties" }, { label: "About Us", href: "/about" }, { label: "Contact", href: "/contact" }, { label: "List Property", href: "/contact" }].map(item => (
+              {[{ label: "Home", href: "/" }, { label: "All Properties", href: "/properties" }, { label: "About Us", href: "/about" }, { label: "Contact", href: "/contact" }].map(item => (
                 <li key={item.href}>
                   <Link href={item.href} className="flex items-center gap-2 text-sm transition-colors group" style={{ color: "rgba(167,243,208,0.6)" }}>
                     <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" style={{ color: "#16a34a" }} />
