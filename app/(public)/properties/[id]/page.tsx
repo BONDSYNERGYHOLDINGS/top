@@ -211,7 +211,7 @@ export default async function PropertyDetailPage({ params }: Props) {
             <div className="sticky" style={{ top: "96px" }}>
               <div className="rounded-2xl p-6 mb-4"
                 style={{ background: "white", boxShadow: "0 4px 24px rgba(10,77,46,0.10), 0 1px 6px rgba(0,0,0,0.04)", border: "1px solid #f0fdf4" }}>
-                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#9ca3af" }}>Listed Price</p>
+                <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#9ca3af" }}>Starting from</p>
                 <p className="font-display font-bold text-3xl mb-4" style={{ color: "#0A4D2E" }}>
                   {property.price}
                 </p>

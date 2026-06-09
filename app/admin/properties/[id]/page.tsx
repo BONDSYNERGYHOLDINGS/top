@@ -85,7 +85,7 @@ export default async function EditPropertyPage({ params }: Props) {
         {!property && (
           <div className="mb-6 p-4 rounded-xl text-sm"
             style={{ background: "#fffbeb", border: "1px solid #fcd34d", color: "#92400e" }}>
-            ⚠️ Could not load property data from Google Sheets. Check your environment variables. You can still fill in the form and save.
+            ⚠️ Unable to load properties, Please Refresh...
           </div>
         )}
 

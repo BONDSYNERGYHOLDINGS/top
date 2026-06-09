@@ -12,7 +12,7 @@ interface Property {
 }
 
 const TYPES   = ["All", "house", "apartment", "land", "commercial"];
-const SORTS   = ["Default", "Price: Low to High", "Price: High to Low"];
+const SORTS   = ["Newest Listing", "Price: Low to High", "Price: High to Low"];
 const typeLabel = (t: string) =>
   ({ house: "Houses", apartment: "Apartments", land: "Land", commercial: "Commercial" }[t] ?? t);
 
