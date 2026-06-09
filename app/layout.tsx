@@ -42,10 +42,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased ">
-        <Navbar />
+     
         <main>{children}</main>
-        <Footer />
-        <WhatsAppFloat />
+     
       </body>
     </html>
   );

@@ -7,7 +7,7 @@ export default function WhatsAppFloat() {
 
   const handleChat = () => {
     const msg = encodeURIComponent("Hello, I'm interested in learning more about your properties. Could you assist me?");
-    window.open(`https://wa.me/2348056368084?text=${msg}`, "_blank");
+    window.open(`https://wa.me/2347067882908?text=${msg}`, "_blank");
   };
 
   return (

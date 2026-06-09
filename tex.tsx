@@ -1,45 +1,4 @@
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { getPropertyById, properties } from "@/lib/properties";
-import { MapPin, Bed, Bath, Maximize2, Calendar, CheckCircle2, ArrowLeft, Share2, MessageCircle, Phone } from "lucide-react";
-import type { Metadata } from "next";
-import PropertyCard from "@/components/ui/PropertyCard";
-
-interface Props {
-  params: Promise<{ id: string }>;
-}
-
-export async function generateStaticParams() {
-  return properties.map((p) => ({ id: p.id }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = await params;
-  const property = getPropertyById(id);
-  if (!property) return { title: "Property Not Found" };
-  return {
-    title: property.title,
-    description: property.shortDesc,
-  };
-}
-
-export default async function PropertyDetailPage({ params }: Props) {
-  const { id } = await params;
-  const property = getPropertyById(id);
-  if (!property) notFound();
-
-  const whatsappMsg = encodeURIComponent(
-    `Hello, I'm interested in the property: ${property.title} (${property.price}). Could you provide more details?`
-  );
-  const whatsappUrl = `https://wa.me/${property.agent.whatsapp}?text=${whatsappMsg}`;
-
-  const related = properties
-    .filter((p) => p.id !== property.id && p.type === property.type)
-    .slice(0, 3);
-
-  return (
-    <div className="min-h-screen bg-white pt-20">
+<div className="min-h-screen bg-white pt-20">
       {/* Gallery */}
       <div className="relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-2 h-[320px] md:h-[480px] overflow-hidden">
@@ -271,5 +230,3 @@ export default async function PropertyDetailPage({ params }: Props) {
         )}
       </div>
     </div>
-  );
-}

@@ -13,33 +13,33 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Adebayo Okafor",
+    name: "Omotayo Dosunmu",
     role: "Founder & CEO",
     location: "Lagos",
-    bio: "15+ years in luxury real estate. Former Director at a top Nigerian property firm.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+    bio: "15+ years in luxury real estate. Director at a top Nigerian property firm.",
+    image: "https://res.cloudinary.com/dqzsdgugd/image/upload/v1780909794/IMG-118_vghhjy.jpg",
   },
-  {
-    name: "Chisom Nwosu",
-    role: "Head of Sales",
-    location: "Lagos",
-    bio: "Expert in Victoria Island and Ikoyi market. Over ₦10B in transactions closed.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
-  },
-  {
-    name: "Fatima Aliyu",
-    role: "Abuja Director",
-    location: "Abuja",
-    bio: "Specialist in Maitama and Asokoro premium properties for over a decade.",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80",
-  },
-  {
-    name: "Tunde Bakare",
-    role: "Investments Advisor",
-    location: "Lagos",
-    bio: "Chartered surveyor and property investment strategist with a proven track record.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-  },
+  // {
+  //   name: "Chisom Nwosu",
+  //   role: "Head of Sales",
+  //   location: "Lagos",
+  //   bio: "Expert in Victoria Island and Ikoyi market. Over ₦10B in transactions closed.",
+  //   image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+  // },
+  // {
+  //   name: "Fatima Aliyu",
+  //   role: "Abuja Director",
+  //   location: "Abuja",
+  //   bio: "Specialist in Maitama and Asokoro premium properties for over a decade.",
+  //   image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80",
+  // },
+  // {
+  //   name: "Tunde Bakare",
+  //   role: "Investments Advisor",
+  //   location: "Lagos",
+  //   bio: "Chartered surveyor and property investment strategist with a proven track record.",
+  //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+  // },
 ];
 
 const values = [
@@ -162,15 +162,15 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="The Dream Team"
+            badge="The Pioneer"
             title="Meet Our"
-            titleAccent="Expert Agents"
+            titleAccent="Expert Agent"
             subtitle="A handpicked team of Nigeria's finest real estate professionals."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, i) => (
               <div key={i} className="group bg-white rounded-2xl overflow-hidden shadow-luxury hover:shadow-card-hover transition-all hover:-translate-y-1">
                 <div className="relative h-56 overflow-hidden">
@@ -178,7 +178,7 @@ export default function AboutPage() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-top object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/70 to-transparent" />
                   <div className="absolute bottom-3 left-3">
@@ -192,7 +192,40 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          <div className="flex justify-center">
+  {team.map((member, i) => (
+    <div
+      key={i}
+      className="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-luxury hover:shadow-card-hover transition-all hover:-translate-y-1"
+    >
+      <div className="relative h-100 w-100 overflow-hidden">
+        <Image
+          src={member.image}
+          alt={member.name}
+          fill
+          className="object-top object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/70 to-transparent" />
+        <div className="absolute bottom-3 left-3">
+          <p className="text-white font-display font-semibold text-sm">
+            {member.name}
+          </p>
+          <p className="text-emerald-300 text-xs">{member.role}</p>
+        </div>
+      </div>
+
+      <div className="p-4">
+        <p className="text-gray-500 text-xs leading-relaxed">
+          {member.bio}
+        </p>
+        <p className="text-green-mid text-xs font-medium mt-2">
+          {member.location}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
