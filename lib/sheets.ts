@@ -132,7 +132,7 @@ export async function deleteProperty(id: string): Promise<void> {
   const auth = getAuth();
   const sheets = google.sheets({ version: "v4", auth });
   const meta = await sheets.spreadsheets.get({ spreadsheetId: getSheetId() });
-  const sheet = meta.data.sheets?.find(s => s.properties?.title === "Properties");
+  const sheet = meta.data.sheets?.find(s => s.properties?.title === "properties");
   if (!sheet?.properties?.sheetId) throw new Error("Properties sheet not found");
   const all = await getAllProperties();
   const idx = all.findIndex(p => p.id === id);
