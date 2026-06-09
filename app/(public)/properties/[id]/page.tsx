@@ -154,6 +154,20 @@ export default async function PropertyDetailPage({ params }: Props) {
                     <div className="text-xs" style={{ color: "#6b7280" }}>Year Built</div>
                   </div>
                 )}
+
+                {property.instagramUrl && (
+      <a
+        href={property.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-xl p-4 text-center transition-all hover:scale-105 hover:shadow-md"
+        style={{ background: "linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)" }}
+      >
+        <Video size={20} style={{ color: "white", margin: "0 auto 4px" }} />
+        <div className="font-bold text-sm text-white">Watch</div>
+        <div className="text-xs" style={{ color: "rgba(255,255,255,0.8)" }}>Video Tour</div>
+      </a>
+    )}
               </div>
             )}
 
@@ -246,13 +260,7 @@ export default async function PropertyDetailPage({ params }: Props) {
                     style={{ border: "2px solid #0A4D2E", color: "#0A4D2E" }}>
                     Send Enquiry
                   </Link>
-                   {property.instagramUrl && (
-    <a href={property.instagramUrl} target="_blank" rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-white font-semibold text-sm transition-all hover:scale-[1.02] hover:shadow-lg"
-      style={{ background: "linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)" }}>
-      <Video size={16} /> View on Instagram
-    </a>
-  )}
+                
                 </div>
               </div>
 
