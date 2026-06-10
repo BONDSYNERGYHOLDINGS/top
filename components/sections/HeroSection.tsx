@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [type, setType] = useState("all");
+  const [type, setType] = useState("All");
   const router = useRouter();
 
   const handleSearch = (e: React.FormEvent) => {
@@ -81,7 +81,7 @@ export default function HeroSection() {
                 className="rounded-xl px-4 py-3 text-sm outline-none min-w-36"
                 style={{ background: "rgba(255,255,255,0.15)", color: "white", border: "1px solid rgba(255,255,255,0.2)" }}
               >
-                <option value="all" className="text-gray-800">All Types</option>
+                <option value="All" className="text-gray-800">All Types</option>
                 <option value="house" className="text-gray-800">Houses</option>
                 <option value="apartment" className="text-gray-800">Apartments</option>
                 <option value="land" className="text-gray-800">Land</option>

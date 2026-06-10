@@ -195,7 +195,7 @@ export default function AdminPropertiesPage() {
               </div>
               <h3 className="font-semibold text-center mb-2" style={{ color: "#111827" }}>Delete Property?</h3>
               <p className="text-sm text-center mb-6" style={{ color: "#6b7280" }}>
-                This will permanently remove the row from Google Sheets. This cannot be undone.
+                This will permanently remove the property from your Database. This cannot be undone.
               </p>
               <div className="flex gap-3">
                 <button onClick={() => setConfirmDelete(null)}

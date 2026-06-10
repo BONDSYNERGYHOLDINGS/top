@@ -78,11 +78,38 @@ export default function PropertyForm({ initialData, mode, propertyId }: Props) {
     }
   };
 
+  // const handlePriceChange = (val: string) => {
+  //   set("price", val);
+  //   const num = Number(val.replace(/[^0-9]/g, ""));
+  //   if (!isNaN(num)) set("priceRaw", num);
+  // };
+
   const handlePriceChange = (val: string) => {
-    set("price", val);
-    const num = Number(val.replace(/[^0-9]/g, ""));
-    if (!isNaN(num)) set("priceRaw", num);
-  };
+  // If user clears the field entirely, reset
+  if (!val || val === "₦") {
+    set("price", "");
+    set("priceRaw", 0);
+    return;
+  }
+
+  // Allow special strings like "COMING SOON", "SALES CLOSED"
+  const isSpecial = /[a-zA-Z]/.test(val);
+  if (isSpecial) {
+    set("price", val.toUpperCase());
+    set("priceRaw", 0);
+    return;
+  }
+
+  // Strip everything except digits
+  const digits = val.replace(/[^0-9]/g, "");
+  if (!digits) return;
+
+  const num = Number(digits);
+  // Format with commas: ₦4,500,000
+  const formatted = "₦" + num.toLocaleString("en-NG");
+  set("price", formatted);
+  set("priceRaw", num);
+};
 
   const addFeature = () => {
     const f = newFeature.trim();
@@ -314,7 +341,10 @@ export default function PropertyForm({ initialData, mode, propertyId }: Props) {
             <Label>Price *</Label>
             <input className={inputCls} style={inputStyle} {...focusStyle}
               value={form.price} onChange={e => handlePriceChange(e.target.value)}
-              placeholder="₦4,500,000 or COMING SOON" required />
+              placeholder="Type amount e.g. 4500000 or COMING SOON" required />
+               <p className="text-xs mt-1" style={{ color: "#9ca3af" }}>
+    ₦ sign and commas are added automatically
+  </p>
           </div>
           <div>
             <Label>Type *</Label>

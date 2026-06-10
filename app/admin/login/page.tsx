@@ -44,7 +44,7 @@ export default function AdminLoginPage() {
             <span className="font-display font-bold text-white text-2xl">N</span>
           </div>
           <h1 className="font-display font-bold text-2xl text-white">Admin Portal</h1>
-          <p className="text-sm mt-1" style={{ color: "rgba(167,243,208,0.7)" }}>Naija Realty · Property Management</p>
+          <p className="text-sm mt-1" style={{ color: "rgba(167,243,208,0.7)" }}>Top Properties Nigeria · Property Management</p>
         </div>
 
         <div className="rounded-2xl p-8" style={{ background: "white", boxShadow: "0 25px 50px rgba(0,0,0,0.25)" }}>
