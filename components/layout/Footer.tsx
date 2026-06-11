@@ -79,15 +79,17 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin size={16} style={{ color: "#16a34a", marginTop: "2px", flexShrink: 0 }} />
-                <span className="text-sm" style={{ color: "rgba(167,243,208,0.6)" }}>15 Adeola Odeku Street<br />Victoria Island, Lagos</span>
+                <span className="text-sm" style={{ color: "rgba(167,243,208,0.6)" }}> LCR House, Monsurat Olayinka Way.<br /> Lekki Scheme 2
+Off Ogombo road.<br />Ajah Lagos.</span>
+                
               </li>
               <li className="flex gap-3">
                 <Phone size={16} style={{ color: "#16a34a", flexShrink: 0 }} />
-                <a href="tel:+2348056368084" className="text-sm transition-colors" style={{ color: "rgba(167,243,208,0.6)" }}>+234 805 636 8084</a>
+                <a href="tel:+2347067882908" className="text-sm transition-colors" style={{ color: "rgba(167,243,208,0.6)" }}>+234 706 788 2908</a>
               </li>
               <li className="flex gap-3">
                 <Mail size={16} style={{ color: "#16a34a", flexShrink: 0 }} />
-                <a href="mailto:info@toppropretiesnigeria.com" className="text-sm transition-colors" style={{ color: "rgba(167,243,208,0.6)" }}>info@toppropretiesnigeria.com</a>
+                <a href="mailto:sales@toppropertynigeria.com" className="text-sm transition-colors" style={{ color: "rgba(167,243,208,0.6)" }}>sales@toppropertynigeria.com</a>
               </li>
             </ul>
             <div className="mt-6 p-4 rounded-xl" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>

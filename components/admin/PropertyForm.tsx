@@ -317,7 +317,7 @@ export default function PropertyForm({ initialData, mode, propertyId }: Props) {
                   style={{ background: "rgba(0,0,0,0.5)" }}>{i + 1}</div>
               </div>
             ))}
-            {[...Array(MAX_IMAGES - form.images.length)].map((_, i) => (
+            {[...Array(Math.max(0, MAX_IMAGES - form.images.length))].map((_, i) => (
               <div key={i} onClick={() => fileInputRef.current?.click()}
                 className="rounded-xl flex items-center justify-center cursor-pointer transition-all hover:opacity-80"
                 style={{ aspectRatio: "4/3", background: "#f9fafb", border: "2px dashed #e5e7eb" }}>

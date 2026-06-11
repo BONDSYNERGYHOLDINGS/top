@@ -27,7 +27,7 @@ export default function CTASection() {
                 <span className="block" style={{ background: "linear-gradient(135deg, #C9963A, #E0AE52)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Awaits You</span>
               </h2>
               <p className="text-base leading-relaxed" style={{ color: "rgba(167,243,208,0.8)" }}>
-                Whether you're buying, selling, or investing — our team of expert agents is ready to guide you every step of the way.
+                Whether you&apos;re buying, selling, or investing — our team of expert agents is ready to guide you every step of the way.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
@@ -36,7 +36,7 @@ export default function CTASection() {
                 style={{ background: "white", color: "#0A4D2E" }}>
                 Browse Properties <ArrowRight size={16} />
               </Link>
-              <Link href="https://wa.me/2348056368084?text=Hello, I'd like a free consultation." target="_blank"
+              <Link href="https://wa.me/2347067882908?text=Hello, I'd like a free consultation." target="_blank"
                 className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-white font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg"
                 style={{ background: "#25D366" }}>
                 <MessageCircle size={16} /> WhatsApp Us

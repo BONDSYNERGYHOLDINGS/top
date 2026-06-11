@@ -167,7 +167,7 @@ export default function AboutPage() {
           <SectionHeader
             badge="The Pioneer"
             title="Meet Our"
-            titleAccent="Expert Agent"
+            titleAccent="Expert Team"
             subtitle="A handpicked team of Nigeria's finest real estate professionals."
           />
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

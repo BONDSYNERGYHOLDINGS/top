@@ -58,9 +58,9 @@ export default function ContactPage() {
 
               <div className="space-y-5 mb-8">
                 {[
-                  { Icon: MapPin, title: "Visit Us", content: "15 Adeola Odeku Street\nVictoria Island, Lagos" },
-                  { Icon: Phone, title: "Call Us", content: "+234 805 636 8084\n+234 817 008 2610" },
-                  { Icon: Mail, title: "Email Us", content: "info@toppropretiesnigeria.com\nsales@toppropretiesnigeria.com" },
+                  { Icon: MapPin, title: "Visit Us", content: "LCR House, Monsurat Olayinka Way.\nLekki Scheme 2 Off Ogombo road.\nAjah Lagos." },
+                  { Icon: Phone, title: "Call Us", content: "+2347067882908" },
+                  { Icon: Mail, title: "Email Us", content: "sales@toppropertynigeria.com" },
                   { Icon: Clock, title: "Working Hours", content: "Mon–Fri: 8:00am – 6:00pm\nSat: 9:00am – 4:00pm" },
                 ].map(({ Icon, title, content }) => (
                   <div key={title} className="flex gap-4">
@@ -77,7 +77,7 @@ export default function ContactPage() {
 
               {/* WhatsApp CTA */}
               <a
-                href={`https://wa.me/2348056368084?text=${whatsappMsg}`}
+                href={`https://wa.me/2347067882908?text=${whatsappMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 w-full p-4 rounded-2xl bg-gradient-to-r from-[#075E54] to-[#25D366] text-white hover:shadow-lg transition-all hover:scale-[1.02]"
@@ -93,18 +93,26 @@ export default function ContactPage() {
 
               {/* Map placeholder */}
               <div className="mt-6 relative h-40 rounded-2xl overflow-hidden bg-emerald-50">
+                <a
+  href="https://www.google.com/maps/dir/?api=1&destination=LCR+House,+Monsurat+Olayinka+Way,+Lekki+Scheme+2,+Off+Ogombo+Road,+Ajah,+Lagos"
+  target="_blank"
+  rel="noopener noreferrer"
+>
                 <Image
                   src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80"
                   alt="Lagos map"
                   fill
                   className="object-cover opacity-60"
                 />
+
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 flex items-center gap-2">
                     <MapPin size={14} className="text-forest" />
-                    <span className="text-forest font-medium text-xs">Victoria Island, Lagos</span>
+                    <span className="text-forest font-medium text-xs"> Ajah Lagos.</span>
                   </div>
+                  
                 </div>
+                </a>
               </div>
             </div>
 
