@@ -5,6 +5,7 @@ import {
   SheetProperty,
 } from "@/lib/sheets";
 import { verifyAdminToken, getTokenFromRequest } from "@/lib/auth";
+import { bustCache } from "@/lib/sheets-helpers";
 
 async function requireAdmin(req: NextRequest) {
   const token = getTokenFromRequest(req);
@@ -41,6 +42,7 @@ export async function POST(req: NextRequest) {
     }
 
     await createProperty(body);
+    bustCache();
     return NextResponse.json({ success: true, id: body.id }, { status: 201 });
   } catch (err: any) {
     console.error("POST /api/properties error:", err);

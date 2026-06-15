@@ -41,11 +41,21 @@ export default function AdminSidebar() {
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3 border-b"
         style={{ background: "white", borderColor: "#e5e7eb", height: "60px" }}>
-        <Link href="/admin" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0A4D2E, #16a34a)" }}>
-            <span className="font-display font-bold text-white text-sm">N</span>
+        <Link href="/admin" className="flex items-center gap-2 ">
+           <div className="px-6 py-5 border-b" style={{ borderColor: "rgba(22,163,74,0.15)" }}>
+     
+          <div className="relative h-14 w-14  rounded-md p-4">
+            <Image
+              src={"/logoblack.svg"}
+              alt="Top Properties Nigeria Brand"
+              fill
+              className="object-fill transition-all duration-300 "
+              priority
+            />
           </div>
-          <span className="font-display font-semibold text-sm" style={{ color: "#0A4D2E" }}>Admin</span>
+       
+      </div>
+          {/* <span className="font-display font-semibold text-sm" style={{ color: "#0A4D2E" }}>Admin</span> */}
         </Link>
         <button onClick={() => setMobileOpen(!mobileOpen)} style={{ color: "#374151" }}>
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}

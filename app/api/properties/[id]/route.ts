@@ -6,6 +6,7 @@ import {
   SheetProperty,
 } from "@/lib/sheets";
 import { verifyAdminToken, getTokenFromRequest } from "@/lib/auth";
+import { bustCache } from "@/lib/sheets-helpers";
 
 async function requireAdmin(req: NextRequest) {
   const token = getTokenFromRequest(req);
@@ -36,6 +37,7 @@ export async function PUT(req: NextRequest, { params }: Params) {
   try {
     const body: SheetProperty = await req.json();
     await updateProperty(id, body);
+    bustCache();
     return NextResponse.json({ success: true });
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 });
@@ -50,6 +52,7 @@ export async function DELETE(req: NextRequest, { params }: Params) {
 
   try {
     await deleteProperty(id);
+    bustCache();
     return NextResponse.json({ success: true });
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 });

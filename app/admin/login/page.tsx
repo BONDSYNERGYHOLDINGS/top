@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Eye, EyeOff, LogIn, AlertCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -39,10 +40,19 @@ export default function AdminLoginPage() {
 
       <div className="relative w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
-            style={{ background: "rgba(255,255,255,0.15)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.2)" }}>
-            <span className="font-display font-bold text-white text-2xl">N</span>
+           <div className="px-6 py-5 border-b" style={{ borderColor: "rgba(22,163,74,0.15)" }}>
+        <Link href="/admin" className="flex items-center justify-center gap-3">
+          <div className="relative h-14 w-14  rounded-md p-4">
+            <Image
+              src={"/logowhite.svg"}
+              alt="Top Properties Nigeria Brand"
+              fill
+              className="object-fill transition-all duration-300 "
+              priority
+            />
           </div>
+        </Link>
+      </div>
           <h1 className="font-display font-bold text-2xl text-white">Admin Portal</h1>
           <p className="text-sm mt-1" style={{ color: "rgba(167,243,208,0.7)" }}>Top Properties Nigeria · Property Management</p>
         </div>
