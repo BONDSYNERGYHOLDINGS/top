@@ -4,7 +4,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-10 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden">
           <div className="absolute inset-0">

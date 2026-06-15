@@ -19,13 +19,13 @@ const team = [
     bio: "15+ years in luxury real estate. Director at a top Nigerian property firm.",
     image: "https://res.cloudinary.com/dqzsdgugd/image/upload/v1780909794/IMG-118_vghhjy.jpg",
   },
-  // {
-  //   name: "Chisom Nwosu",
-  //   role: "Head of Sales",
-  //   location: "Lagos",
-  //   bio: "Expert in Victoria Island and Ikoyi market. Over ₦10B in transactions closed.",
-  //   image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
-  // },
+  {
+    name: "Oludayo Ayeni",
+    role: "Legal Advisor",
+    location: "Lagos",
+    bio: "Legal advisor with expertise in real estate transactions, supporting clients across high-value property deals.",
+    image: "https://res.cloudinary.com/dqzsdgugd/image/upload/v1781524492/Oludayo_Ayeni_mcgoad.jpg",
+  },
   // {
   //   name: "Fatima Aliyu",
   //   role: "Abuja Director",
@@ -193,7 +193,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div> */}
-          <div className="flex justify-center">
+          <div className="flex md:flex-row flex-col justify-center gap-10">
   {team.map((member, i) => (
     <div
       key={i}
