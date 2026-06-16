@@ -4,8 +4,8 @@ import { createAdminToken, setAdminCookie } from "@/lib/auth";
 export async function POST(req: NextRequest) {
   const { username, password } = await req.json();
 
-  const adminUser = process.env.ADMIN_USERNAME ?? "admin";
-  const adminPass = process.env.ADMIN_PASSWORD ?? "naijarealty2024";
+  const adminUser = process.env.ADMIN_USERNAME;
+  const adminPass = process.env.ADMIN_PASSWORD;
 
   if (username !== adminUser || password !== adminPass) {
     return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });

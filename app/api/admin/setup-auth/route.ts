@@ -20,7 +20,13 @@ export async function POST(req: NextRequest) {
 
     // 2. Check if admin user already exists
     const users = await getAllUsers();
-    const adminUser = process.env.ADMIN_USERNAME ?? "admin";
+    const adminUser = process.env.ADMIN_USERNAME;
+    const adminPass = process.env.ADMIN_PASSWORD;
+
+    if (!adminUser || !adminPass) {
+      return NextResponse.json({ error: "Admin credentials are incorrect" }, { status: 500 });
+    }
+
     const alreadyExists = users.some(u => u.username.toLowerCase() === adminUser.toLowerCase());
 
     if (alreadyExists) {
@@ -32,7 +38,6 @@ export async function POST(req: NextRequest) {
     }
 
     // 3. Create admin user with env var password (hashed) and provided email
-    const adminPass = process.env.ADMIN_PASSWORD ?? "naijarealty2024";
     await createAdminUser(adminUser, adminPass, email);
 
     return NextResponse.json({

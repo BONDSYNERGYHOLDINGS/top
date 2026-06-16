@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 
 const SECRET = new TextEncoder().encode(
-  process.env.ADMIN_JWT_SECRET ?? "naija-realty-super-secret-change-in-prod"
+  process.env.ADMIN_JWT_SECRET
 );
 
 const COOKIE_NAME = "nr_admin_token";

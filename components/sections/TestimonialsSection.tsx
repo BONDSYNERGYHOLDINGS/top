@@ -5,17 +5,17 @@ const testimonials = [
   {
     name: "Dr. Chukwuemeka Obi", role: "CEO, Fintech Startup", location: "Lagos",
     text: "Top Properties Nigeria transformed my property search from a stressful ordeal into a genuinely enjoyable experience. Their team's knowledge of the Ikoyi market is unmatched. I found my dream villa in just two weeks.",
-    rating: 5, image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+    rating: 5, image: "https://images.unsplash.com/photo-1666866854783-8943590e37c8?w=200&q=80",
   },
   {
     name: "Mrs. Amina Hassan", role: "Director, Oil & Gas", location: "Abuja",
     text: "After years of frustrating property searches in Maitama, a colleague recommended Top Properties Nigeria. Within days, they presented three perfect options. The transaction was seamless and professional from start to finish.",
-    rating: 5, image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80",
+    rating: 5, image: "https://images.unsplash.com/photo-1710777915903-a7d7f159f2c0?w=200&q=80",
   },
   {
     name: "Mr. Tunde Babatunde", role: "Real Estate Investor", location: "Lagos",
     text: "I've been investing in Lagos real estate for 15 years and Top Properties Nigeria is by far the most professional agency I've encountered. Their market intelligence and investment guidance have been invaluable to my portfolio.",
-    rating: 5, image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+    rating: 5, image: "https://images.unsplash.com/photo-1663497823745-1a34465f0be4?w=200&q=80",
   },
 ];
 
