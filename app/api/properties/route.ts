@@ -24,6 +24,7 @@ export async function GET() {
   }
 }
 
+
 // POST /api/properties — create new (admin only)
 export async function POST(req: NextRequest) {
   const session = await requireAdmin(req);

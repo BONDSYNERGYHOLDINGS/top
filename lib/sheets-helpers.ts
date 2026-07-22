@@ -1,4 +1,4 @@
-// import "server-only";
+import "server-only";
 import {
   getAllProperties as fetchAll,
   getPropertyById as fetchById,

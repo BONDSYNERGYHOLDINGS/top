@@ -6,6 +6,10 @@ import { getFeaturedProperties } from "@/lib/sheets-helpers";
 
 export default async function FeaturedSection() {
   const featured = await getFeaturedProperties();
+    JSON.stringify(featured);
+  //   const data = await getFeaturedProperties();
+
+  // const featured = structuredClone(data);
 
   return (
     <section className="py-20 md:py-28 bg-white">
